@@ -7,7 +7,7 @@ public class VentanaPrincipal extends JFrame {
     //--------------------------------
     // ATRIBUTO
     //--------------------------------
-
+    private PanelEntradaDatos miPanelEntradaDatos;
     //--------------------------------
     // METODO
     //--------------------------------
@@ -15,6 +15,17 @@ public class VentanaPrincipal extends JFrame {
     // MERODO CONSTRUCTOR
    public VentanaPrincipal()
    {
+    
+    //definicion del contenedor de la ventana
+    this.setLayout(null);
+
+    //CREACION Y ADICION DE UN PANEL TIPO PANELENTRADADATOS
+    miPanelEntradaDatos = new PanelEntradaDatos();
+    miPanelEntradaDatos.setBounds(10,10,465, 200);
+    this.add(miPanelEntradaDatos);
+
+
+
     //CARACTERISTICAS DE LA VENTANA
     this.setTitle("Mayor de 3 enteros");
     this.setSize(500,500);
@@ -27,4 +38,4 @@ public class VentanaPrincipal extends JFrame {
         
     }
     
-}
+
