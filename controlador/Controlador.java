@@ -37,7 +37,7 @@ public class Controlador implements ActionListener
         String comando = ae.getActionCommand();
         
         if(comando.equals("hallarMayor"))
-        //try
+        try
         {
             this.model.setX(Integer.parseInt(this.venPrin.miPanelEntradaDatos.getTfX()));
             this.model.setY(Integer.parseInt(this.venPrin.miPanelEntradaDatos.getTfY()));
@@ -46,10 +46,10 @@ public class Controlador implements ActionListener
             this.venPrin.miPanelResultados.mostrarResultado(this.model.getMayor());
 
         }
-        //catch(Exception ex)
-        //{
-        //  JOptionPane.showMessageDialog(null,"Datos incorrectos. \nLos datos deben ser enteros","Suma 3 enteros",JOptionPane.ERROR_MESSAGE);
-        //}
+        catch(Exception ex)
+        {
+          JOptionPane.showMessageDialog(null,"Datos incorrectos. \nLos datos deben ser enteros","Suma 3 enteros",JOptionPane.ERROR_MESSAGE);
+        }
         if(comando.equals("borrar"))
         {
             JOptionPane.showMessageDialog(null,"Los datos serán borrados", "suma 3 enteros", JOptionPane.WARNING_MESSAGE );
