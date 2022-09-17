@@ -11,6 +11,7 @@ public class VentanaPrincipal extends JFrame
     //------------------
     public PanelEntradaDatos miPanelEntradaDatos;
     public PanelOperaciones miPanelOperaciones;
+    public PanelResultados miPanelResultados;
     public Controlador miControlador;
 
     //------------------
@@ -32,7 +33,13 @@ public class VentanaPrincipal extends JFrame
         miPanelOperaciones = new PanelOperaciones();
         miPanelOperaciones.setBounds(10,220,480,60);
         this.add(miPanelOperaciones);
-        
+       
+        //CREACION Y ADICCION DE UN PANEL RESULTADOS
+
+        miPanelResultados = new PanelResultados();
+        miPanelResultados.setBounds(10,290,480,160);
+        this.add(miPanelResultados);
+
         // Caracteristicas de la ventana
         this.setTitle("Mayor de 3 enteros");
         this.setSize(500,500);

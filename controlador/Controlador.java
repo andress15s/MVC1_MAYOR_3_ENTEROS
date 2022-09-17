@@ -5,6 +5,8 @@ import vista.VentanaPrincipal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JOptionPane;
+
 
 public class Controlador implements ActionListener
 {
@@ -35,15 +37,28 @@ public class Controlador implements ActionListener
         String comando = ae.getActionCommand();
         
         if(comando.equals("hallarMayor"))
+        //try
         {
+            this.model.setX(Integer.parseInt(this.venPrin.miPanelEntradaDatos.getTfX()));
+            this.model.setY(Integer.parseInt(this.venPrin.miPanelEntradaDatos.getTfY()));
+            this.model.setZ(Integer.parseInt(this.venPrin.miPanelEntradaDatos.getTfZ()));
+            this.model.hallarMayor();
+            this.venPrin.miPanelResultados.mostrarResultado(this.model.getMayor());
 
         }
+        //catch(Exception ex)
+        //{
+        //  JOptionPane.showMessageDialog(null,"Datos incorrectos. \nLos datos deben ser enteros","Suma 3 enteros",JOptionPane.ERROR_MESSAGE);
+        //}
         if(comando.equals("borrar"))
         {
-            System.setOut(null);
+            JOptionPane.showMessageDialog(null,"Los datos serán borrados", "suma 3 enteros", JOptionPane.WARNING_MESSAGE );
+            this.venPrin.miPanelEntradaDatos.borrar();
+            this.venPrin.miPanelResultados.borrar();
         }
         if(comando.equals("salir"))
         {
+            JOptionPane.showMessageDialog(null , "El progama se cerrará." , "suma 3 enteros", JOptionPane.WARNING_MESSAGE);
             System.exit(0);
         }
     }
@@ -52,3 +67,4 @@ public class Controlador implements ActionListener
 
 
 
+ 

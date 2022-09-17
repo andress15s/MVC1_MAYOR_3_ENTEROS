@@ -13,8 +13,8 @@ public class PanelResultados extends JPanel
     //------------------
     // Atributos
     //------------------
-    private JTextArea taResultado;
-    private JScrollPane spResultado;
+    public JTextArea taResultado;
+    public JScrollPane spResultado;
 
     //------------------
     // Metodos
@@ -42,8 +42,8 @@ public class PanelResultados extends JPanel
     //Metodos de acceso a la informacion
     public void mostrarResultado(int mayor)
     {
-        taResultado.setText("El numero mayor es: " + mayor);
-        //taResultado.append("\nEl numero mayor es: " + mayor);
+        //taResultado.setText("El numero mayor es: " + mayor);
+        taResultado.append("\nEl numero mayor es: " + mayor);
     }
 
     //Borrar
